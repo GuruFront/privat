@@ -1,6 +1,7 @@
 import Vue from 'vue'
 import Router from 'vue-router'
 import HelloWorld from '@/pages/login'
+import Result from '@/pages/result'
 
 import BootstrapVue from 'bootstrap-vue'
 
@@ -13,6 +14,11 @@ export default new Router({
       path: '/',
       name: 'HelloWorld',
       component: HelloWorld
-    }
+    },
+    {
+      path: '/result',
+      name: 'Result',
+      component: Result
+    }    
   ]
 })
