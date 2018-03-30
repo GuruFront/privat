@@ -1,6 +1,6 @@
 <template>
   <div class="container box">
-    <h2>{{result}} $</h2>
+    <h2>{{result}} UAH</h2>
     <router-link class="btn btn-primary" to="/"> Назад</router-link>
   </div>
 </template>

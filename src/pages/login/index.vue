@@ -1,7 +1,7 @@
 <template>
   <div class="container box">
     <h5>Введите значение</h5>
-    <input class="input" type="number" v-model="result" placeholder="UAH" @input="updateCurrent" v-on:submit="">
+    <input class="input" type="number" v-model="result" placeholder="USD" @input="updateCurrent" v-on:submit="">
     <div class="btn btn-primary" @click='go'>Посчитать</div>
     <div @click='clear' class="clear btn btn-primary">Очистить</div>
   </div>
@@ -32,9 +32,7 @@ export default {
     load() {
       var vm = this;
       this.axios.get('https://api.privatbank.ua/p24api/pubinfo?exchange&json&coursid=11').then(function(response) {
-
         return vm.$store.commit('updateUSD', response.data[0].buy);
-
       }).catch(function(error) {
         console.log(error)
       });
